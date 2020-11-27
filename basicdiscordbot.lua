@@ -3,7 +3,8 @@ local client = discordia.Client()
 
 
 client:on('ready', function()
-    print('Logged in as '.. client.user.username)
+	print('Logged in as '.. client.user.username)
+	client:getServerById("256403463510949898"):getChannelById("260453104791584768"):sendMessage("welcome ".. member.username .." to the server")
 end)
 
 client:on(
@@ -30,7 +31,8 @@ client:on('messageCreate', function(message)
 	if message.author == client.user then return end
 	
 	if cmd == '?/ping' then
-       		message.channel:sendMessage('pong')
+			   message.channel:sendMessage('pong')
+			
 	end
 	if cmd == '?/musa' then
        		message.channel:sendMessage('motherland')
@@ -77,7 +79,7 @@ client:on('messageCreate', function(message)
 		
 end)
 		
-client:run("put your token here")
+client:run("NzgyMDAzOTUwODg2OTc3NTM2.X8F37g._vOvKUc-3smQvUcJgusMAmCuEJ0")
  
 
 
