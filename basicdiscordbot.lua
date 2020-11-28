@@ -37,9 +37,6 @@ client:on('messageCreate', function(message)
 	if cmd == '?/musa' then
        		message.channel:sendMessage('motherland')
 	end
-	if cmd == '?/discordia' then
-        	message.channel:sendMessage('https://github.com/SinisterRectus/Discordia')
-    	end
 	if cmd == '?/setservername' then
 		guild:setName(arg)
 		message.channel:sendMessage('done')
